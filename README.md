@@ -7,7 +7,7 @@ The project uses **Object-Oriented Programming (OOP)** to organize the game logi
 ##  Features
 
 -  Sudoku puzzle generation using an API
--  Multiple difficulty levels (Easy, Medium, Hard, Expert, Master and extreme)
+-  Multiple difficulty levels (Easy, Medium, Hard, Expert, Master and Extreme)
 -  Three lives/hearts
 -  Game timer
 -  Pause and resume

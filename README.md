@@ -50,6 +50,7 @@ Sudoku/
 │   └── SudokuUI.js
 │
 └── images/
+```text
 
 ## 🎮 How to Play
 Choose a difficulty level.

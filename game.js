@@ -5,9 +5,8 @@ import GameStorage from "./GameStorage.js";
 
 const gameTimer = new GameTimer();
 const sudokuGame = new SudokuGame();
-const sudokuUI= new SudokuUI();
+const sudokuUI = new SudokuUI();
 const gameStorage = new GameStorage();
-
 const pauseIcon = document.getElementById("pauseIcon");
 const homeIcon = document.getElementById("homeIcon");
 const resetBtn = document.getElementById("resetBtn");
@@ -28,46 +27,43 @@ const sudokuBoard = document.getElementById("sudokuBoard");
 const lives = document.querySelectorAll(".heart");
 const themeIcon = document.getElementById("themeIcon");
 const undoBtn = document.getElementById("undoBtn");
-
 const playAgainBtn = document.getElementById("playAgainBtn");
 const homeBtn = document.getElementById("homeBtn");
-
 const savedTimer = localStorage.getItem("timer");
 
-
 difLbl.textContent = savedDifficulty;
-
 
 let isDark;
 let isPaused = false;
 
 if (savedTimer) {
     let parts = savedTimer.split(":");
-    let hours= parseInt(parts[0]);
-    let minutes= parseInt(parts[1]);
-    let remainingSeconds= parseInt(parts[2]);
-    gameTimer.seconds = hours*3600 +minutes*60+remainingSeconds;
-    timerText.textContent=savedTimer;
+    let hours = parseInt(parts[0]);
+    let minutes = parseInt(parts[1]);
+    let remainingSeconds = parseInt(parts[2]);
+    gameTimer.seconds = hours * 3600 + minutes * 60 + remainingSeconds;
+    timerText.textContent = savedTimer;
 }
-else{
-    timerText.textContent="00:00:00";
+else {
+    timerText.textContent = "00:00:00";
 }
 
- 
 gameTimer.start();
-setInterval(function(){
-    let seconds = gameTimer.getSeconds();
-    let hours = Math.floor(seconds/3600);
-    let minutes = Math.floor((seconds%3600)/60);
-    let remainingSeconds = seconds % 60;
+setInterval(function () {
+    if (!isPaused) {
+        let seconds = gameTimer.getSeconds();
+        let hours = Math.floor(seconds / 3600);
+        let minutes = Math.floor((seconds % 3600) / 60);
+        let remainingSeconds = seconds % 60;
 
-    timerText.textContent = hours.toString().padStart(2,"0") +":" +
-     minutes.toString().padStart(2,"0") + ":" + 
-     remainingSeconds.toString().padStart(2,"0");
-     localStorage.setItem("timer", timerText.textContent);
-},1000);
+        timerText.textContent = hours.toString().padStart(2, "0") + ":" +
+            minutes.toString().padStart(2, "0") + ":" +
+            remainingSeconds.toString().padStart(2, "0");
+        localStorage.setItem("timer", timerText.textContent);
+    }
+}, 1000);
 
-function saveGame(){
+function saveGame() {
     gameStorage.saveGame(sudokuGame, timerText);
 }
 
@@ -83,13 +79,13 @@ function restoreGame() {
     sudokuGame.board = JSON.parse(savedBoard);
     console.log("SAVED BOARD FOUND:", savedBoard);
     if (savedHearts !== null) {
-       sudokuGame.hearts = Number(savedHearts);
+        sudokuGame.hearts = Number(savedHearts);
     }
     if (savedMoves) {
-       sudokuGame.moveHistory = JSON.parse(savedMoves);
+        sudokuGame.moveHistory = JSON.parse(savedMoves);
     }
 
-    if (savedFreq){
+    if (savedFreq) {
         sudokuGame.freq = JSON.parse(savedFreq);
     }
 
@@ -114,29 +110,29 @@ function restoreGame() {
         else lives[i].style.visibility = "hidden";
     }
 
-   for (let row = 0; row < 9; row++) {
-    for (let col = 0; col < 9; col++) {
+    for (let row = 0; row < 9; row++) {
+        for (let col = 0; col < 9; col++) {
 
-        const index = row * 9 + col;
-        const value = sudokuGame.board[row][col];
+            const index = row * 9 + col;
+            const value = sudokuGame.board[row][col];
 
-        cells[index].classList.remove("wrong");
+            cells[index].classList.remove("wrong");
 
-        if (
-            value !== 0 &&
-            value !== sudokuGame.solutionBoard[row][col] &&
-            Number(sudokuGame.puzzle[index]) === 0
-        ) {
-            cells[index].classList.add("wrong");
+            if (
+                value !== 0 &&
+                value !== sudokuGame.solutionBoard[row][col] &&
+                Number(sudokuGame.puzzle[index]) === 0
+            ) {
+                cells[index].classList.add("wrong");
+            }
         }
     }
-}
 
     numberBtn.forEach(function (button) {
         const number = Number(button.textContent);
         if ((sudokuGame.freq[number] || 0) >= 9) {
             button.disabled = true;
-        }  
+        }
         else button.disabled = false;
     });
     console.log("BOARD RESTORED:", sudokuGame.board);
@@ -171,26 +167,26 @@ for (let row = 0; row < 9; row++) {
                 sudokuUI.showMessage("Select a number first");
             }
             else if (sudokuGame.selectedNumber === sudokuGame.solutionBoard[cellRow][cellCol]) {
-                if ((sudokuGame.freq[sudokuGame.selectedNumber]||0) < 9) {
+                if ((sudokuGame.freq[sudokuGame.selectedNumber] || 0) < 9) {
                     sudokuGame.moveHistory.push({
                         row: cellRow, col: cellCol,
-                        oldValue: sudokuGame.board[cellRow][cellCol], newValue: sudokuGame.selectedNumber, isWrong:false
+                        oldValue: sudokuGame.board[cellRow][cellCol], newValue: sudokuGame.selectedNumber, isWrong: false
                     });
-                    sudokuGame.freq[sudokuGame.selectedNumber] = (sudokuGame.freq[sudokuGame.selectedNumber]||0) +1;
+                    sudokuGame.freq[sudokuGame.selectedNumber] = (sudokuGame.freq[sudokuGame.selectedNumber] || 0) + 1;
                     sudokuCell.classList.remove("wrong");
                     sudokuCell.textContent = sudokuGame.selectedNumber;
                     sudokuGame.board[cellRow][cellCol] = sudokuGame.selectedNumber;
-                    if (sudokuGame.freq[sudokuGame.selectedNumber] ===9){
-                       sudokuUI.showMessage("This number is completed!");
-                        numberBtn.forEach(function(button){
-                            if (Number(button.textContent) === sudokuGame.selectedNumber){
-                                button.disabled =true;
+                    if (sudokuGame.freq[sudokuGame.selectedNumber] === 9) {
+                        sudokuUI.showMessage("This number is completed!");
+                        numberBtn.forEach(function (button) {
+                            if (Number(button.textContent) === sudokuGame.selectedNumber) {
+                                button.disabled = true;
                                 button.classList.remove("selected");
                                 button.classList.remove("hover");
                             }
                         })
                     }
-                    
+
                     saveGame();
                     if (sudokuGame.checkWin()) {
                         sudokuGame.gameWon = true;
@@ -216,8 +212,8 @@ for (let row = 0; row < 9; row++) {
                         heart.style.visibility ="hidden";*/
                     lives[sudokuGame.hearts].style.visibility = "hidden";
                     sudokuCell.classList.add("wrong");
-                    sudokuCell.textContent=sudokuGame.selectedNumber;
-                    sudokuGame.board[cellRow][cellCol] =0;
+                    sudokuCell.textContent = sudokuGame.selectedNumber;
+                    sudokuGame.board[cellRow][cellCol] = 0;
                     saveGame();
                     if (sudokuGame.hearts === 0) {
                         sudokuGame.gameOver = true;
@@ -341,33 +337,32 @@ undoBtn.addEventListener("click", function () {
         const lastMove = sudokuGame.moveHistory.pop();
         const cells = document.querySelectorAll(".sudokuCell");
         const index = lastMove.row * 9 + lastMove.col;
-        const cell= cells[index];
-        if (!lastMove.isWrong){
-           sudokuGame.freq[lastMove.newValue]--;
-            sudokuGame.board[lastMove.row][lastMove.col]=lastMove.oldValue;
-            cell.textContent ="";
-            numberBtn.forEach(function(button){
-                const number=Number(button.textContent);
-                if (number===lastMove.newValue){
-                    if (sudokuGame.freq[number]>=9){
-                        button.disabled=true;
+        const cell = cells[index];
+        if (!lastMove.isWrong) {
+            sudokuGame.freq[lastMove.newValue]--;
+            sudokuGame.board[lastMove.row][lastMove.col] = lastMove.oldValue;
+            cell.textContent = "";
+            numberBtn.forEach(function (button) {
+                const number = Number(button.textContent);
+                if (number === lastMove.newValue) {
+                    if (sudokuGame.freq[number] >= 9) {
+                        button.disabled = true;
                     }
-                    else{
-                        button.disabled=false;
+                    else {
+                        button.disabled = false;
                     }
                 }
             });
         }
         //wrong moves
-        else{
-           sudokuGame.board[lastMove.row][lastMove.col]=0;
-            cell.textContent="";
+        else {
+            sudokuGame.board[lastMove.row][lastMove.col] = 0;
+            cell.textContent = "";
             cell.classList.remove("wrong");
         }
-        saveGame();}});
-        
-    
-
+        saveGame();
+    }
+});
 
 numberBtn.forEach(function (button) {
 
@@ -376,7 +371,7 @@ numberBtn.forEach(function (button) {
             btn.classList.remove("selected");
         });
         button.classList.add("selected");
-       sudokuGame. selectedNumber = Number(button.textContent);
+        sudokuGame.selectedNumber = Number(button.textContent);
     });
 })
 
@@ -394,9 +389,6 @@ homeBtn.addEventListener("click", function () {
     window.location.href = "index.html";
 })
 
-
-
-
 const dif = savedDifficulty.toLowerCase();
 const savedPuzzle = localStorage.getItem("puzzle");
 const savedSolution = localStorage.getItem("solution");
@@ -404,7 +396,7 @@ const savedDif = localStorage.getItem("savedDif");
 
 if (savedPuzzle && savedSolution && savedDif === dif) {
     sudokuGame.solution = savedSolution;
-   sudokuGame. puzzle = savedPuzzle;
+    sudokuGame.puzzle = savedPuzzle;
     console.log(sudokuGame.solution);
     console.log(sudokuGame.puzzle);
     sudokuGame.loadPuzzle(sudokuGame.puzzle, sudokuGame.solution);

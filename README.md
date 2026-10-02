@@ -1,10 +1,10 @@
-# 🎮 Sudoku Game
+#  Sudoku Game
 
 A web-based Sudoku game built using **HTML, CSS, and JavaScript**.
 
 The project uses **Object-Oriented Programming (OOP)** to organize the game logic, timer system, user interface, and game storage.
 
-## ✨ Features
+##  Features
 
 -  Sudoku puzzle generation using an API
 -  Multiple difficulty levels (Easy, Medium, Hard, Expert, Master and extreme)
@@ -20,7 +20,7 @@ The project uses **Object-Oriented Programming (OOP)** to organize the game logi
 -  Play Again option
 -  Home button
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - HTML5
 - CSS3
@@ -29,7 +29,7 @@ The project uses **Object-Oriented Programming (OOP)** to organize the game logi
 - Local Storage
 - MTSudoku API
 
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 Sudoku/
@@ -52,7 +52,7 @@ Sudoku/
 └── images/
 ```
 
-## 🎮 How to Play
+##  How to Play
 - Choose a difficulty level.
 - Select a number from the number buttons.
 - Click on an empty Sudoku cell to place the selected number.
@@ -61,22 +61,22 @@ Sudoku/
 - Use Pause to pause the game.
 - Complete the Sudoku puzzle to win.
   
-## ⚙️ Game Features
-## ⏱️ Timer
+##  Game Features
+###  Timer
 
 The game includes a timer that keeps track of the time.
 The timer can be paused and resumed.
 
-## ❤️ Lives
+### Lives
 
 The player starts with three lives.
 Each incorrect move removes one life. When all three lives are lost, the game ends.
 
-## ↩️ Undo
+### Undo
 
 The Undo button removes the most recent move and restores the previous state of the selected cell.
 
-## 💾 Save Progress
+### Save Progress
 
 The game uses localStorage to save the player's progress, including:
 
@@ -89,11 +89,11 @@ The game uses localStorage to save the player's progress, including:
 
 This allows the game to restore the player's progress after refreshing the page.
 
-## 🌙 Dark Mode
+### Dark Mode
 
 The player can switch between light mode and dark mode during the game.
 
-## 🧩 Object-Oriented Programming
+### Object-Oriented Programming
 
 The JavaScript code is organized into separate classes:
 
@@ -103,7 +103,7 @@ The JavaScript code is organized into separate classes:
 - SudokuUI — handles messages and end-game panels.
 - game.js — connects the classes together and handles the main game interactions.
 
-## 🌐 API
+### API
 
 Sudoku puzzles are generated using the MTSudoku API.
 
@@ -111,7 +111,7 @@ API endpoint:
 https://api.mtsudoku.com/v1/generate
 The API provides both the Sudoku puzzle and its solution.
 
-## ▶️ How to Run
+### How to Run
 - Download or clone the repository.
 - Open the project in a local server.
 - Open index.html in your browser.

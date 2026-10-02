@@ -6,19 +6,19 @@ The project uses **Object-Oriented Programming (OOP)** to organize the game logi
 
 ## ✨ Features
 
-- 🎲 Sudoku puzzle generation using an API
-- 🎯 Multiple difficulty levels
-- ❤️ Three lives/hearts
-- ⏱️ Game timer
-- ⏸️ Pause and resume
-- ↩️ Undo moves
-- 🌙 Dark and light mode
-- 💾 Save and restore game progress
-- ❌ Wrong move indication
-- 🔢 Number completion tracking
-- 🏆 Win and game-over screens
-- 🔄 Play Again option
-- 🏠 Home button
+-  Sudoku puzzle generation using an API
+-  Multiple difficulty levels (Easy, Medium, Hard, Expert, Master and extreme)
+-  Three lives/hearts
+-  Game timer
+-  Pause and resume
+-  Undo moves
+-  Dark and light mode
+-  Save and restore game progress
+-  Wrong move indication
+-  Number completion tracking
+-  Win and game-over screens
+-  Play Again option
+-  Home button
 
 ## 🛠️ Technologies Used
 

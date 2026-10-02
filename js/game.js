@@ -77,7 +77,7 @@ function restoreGame() {
         return;
     }
     sudokuGame.board = JSON.parse(savedBoard);
-    console.log("SAVED BOARD FOUND:", savedBoard);
+   // console.log("SAVED BOARD FOUND:", savedBoard);
     if (savedHearts !== null) {
         sudokuGame.hearts = Number(savedHearts);
     }
@@ -135,7 +135,7 @@ function restoreGame() {
         }
         else button.disabled = false;
     });
-    console.log("BOARD RESTORED:", sudokuGame.board);
+   // console.log("BOARD RESTORED:", sudokuGame.board);
 }
 
 if (savedTheme === "dark") {
@@ -397,8 +397,8 @@ const savedDif = localStorage.getItem("savedDif");
 if (savedPuzzle && savedSolution && savedDif === dif) {
     sudokuGame.solution = savedSolution;
     sudokuGame.puzzle = savedPuzzle;
-    console.log(sudokuGame.solution);
-    console.log(sudokuGame.puzzle);
+    //console.log(sudokuGame.solution);
+   // console.log(sudokuGame.puzzle);
     sudokuGame.loadPuzzle(sudokuGame.puzzle, sudokuGame.solution);
     restoreGame();
 

@@ -141,11 +141,11 @@ function restoreGame() {
 if (savedTheme === "dark") {
     document.body.classList.add("dark-mode");
     document.body.classList.remove("light-mode");
-    themeIcon.src = "sun.png";
-    homeIcon.src = "whiteHome.png";
-    timerIcon.src = "whiteTimer.png";
-    levelIcon.src = "whiteLevel.png";
-    pauseIcon.src = "whitePause.png";
+    themeIcon.src = "images/sun.png";
+    homeIcon.src = "images/whiteHome.png";
+    timerIcon.src = "images/whiteTimer.png";
+    levelIcon.src = "images/whiteLevel.png";
+    pauseIcon.src = "images/whitePause.png";
 }
 
 for (let row = 0; row < 9; row++) {
@@ -243,20 +243,20 @@ pauseIcon.addEventListener("click", function () {
         pausePanel.style.backgroundColor = "#1c1e3a";
         pausePanel.style.color = "#ffffff";
         if (isPaused) {
-            pauseIcon.src = "whitePlay.png";
+            pauseIcon.src = "images/whitePlay.png";
         }
         else {
-            pauseIcon.src = "whitePause.png";
+            pauseIcon.src = "images/whitePause.png";
         }
     }
     else {
         pausePanel.style.backgroundColor = "#ffffff";
         pausePanel.style.color = "#1c1e3a";
         if (isPaused) {
-            pauseIcon.src = "navyPlay.png";
+            pauseIcon.src = "images/navyPlay.png";
         }
         else {
-            pauseIcon.src = "navyPause.png";
+            pauseIcon.src = "images/navyPause.png";
         }
     }
     gameTimer.stop();
@@ -268,10 +268,10 @@ resumeButton.addEventListener("click", function () {
     pausePanel.style.display = "none";
     gridOverlay.style.display = "none";
     if (document.body.classList.contains("dark-mode")) {
-        pauseIcon.src = "whitePause.png";
+        pauseIcon.src = "images/whitePause.png";
     }
     else {
-        pauseIcon.src = "navyPause.png";
+        pauseIcon.src = "images/navyPause.png";
     }
     isPaused = false;
     gameTimer.start();
@@ -280,20 +280,20 @@ resumeButton.addEventListener("click", function () {
 themeIcon.addEventListener("click", function () {
     isDark = !isDark;
     const body = document.body;
-    const moon = "moon.png";
-    const sun = "sun.png";
+    const moon = "images/moon.png";
+    const sun = "images/sun.png";
     if (body.classList.contains("light-mode")) {
         body.classList.remove("light-mode");
         body.classList.add("dark-mode");
         themeIcon.src = sun;
-        homeIcon.src = "whiteHome.png";
-        timerIcon.src = "whiteTimer.png";
-        levelIcon.src = "whiteLevel.png";
+        homeIcon.src = "images/whiteHome.png";
+        timerIcon.src = "images/whiteTimer.png";
+        levelIcon.src = "images/whiteLevel.png";
         if (isPaused) {
-            pauseIcon.src = "whitePlay.png";
+            pauseIcon.src = "images/whitePlay.png";
         }
         else {
-            pauseIcon.src = "whitePause.png";
+            pauseIcon.src = "images/whitePause.png";
         }
         localStorage.setItem("theme", "dark");
     }
@@ -301,14 +301,14 @@ themeIcon.addEventListener("click", function () {
         body.classList.remove("dark-mode");
         body.classList.add("light-mode");
         themeIcon.src = moon;
-        homeIcon.src = "navyHome.png";
-        timerIcon.src = "navyTimer.png";
-        levelIcon.src = "navyLevel.png";
+        homeIcon.src = "images/navyHome.png";
+        timerIcon.src = "images/navyTimer.png";
+        levelIcon.src = "images/navyLevel.png";
         if (isPaused) {
-            pauseIcon.src = "navyPlay.png";
+            pauseIcon.src = "images/navyPlay.png";
         }
         else {
-            pauseIcon.src = "navyPause.png";
+            pauseIcon.src = "images/navyPause.png";
         }
         localStorage.setItem("theme", "light");
     }

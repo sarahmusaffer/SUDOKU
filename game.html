@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+        <title> Sudoku</title>
+        <link rel="stylesheet" href="game.css">
+    </head>
+
+    <body class="light-mode">
+        <div id="messageBox"> </div>
+        <div id="game-container">
+            <div class="top-bar">
+                <h1 id="title"> SUDOKU </h1>
+                <div id="lives">
+                    <img src="heart.png" alt="heart" class="heart">
+                    <img src="heart.png" alt="heart" class="heart">
+                    <img src="heart.png" alt="heart" class="heart">
+                </div>
+
+                <div id="topButtons">
+                    <button id="resetBtn">
+                        <img src="whiteReset.png" alt="reset" class="infoIcon">
+                        Reset</button>
+                    <img src="moon.png" alt="moon" id="themeIcon">
+                    <img src="navyhome.png" alt="home" id="homeIcon">
+                </div>
+            </div>
+
+            <div id="gameContent">
+                <div id="gridOverlay"></div>
+                <div id="sudokuBoard">
+                </div>
+                <div id="sidePanel">
+                    <div id="gameInfo">
+                        <div class="infoItem">
+                            <img id="timerIcon" src="navytimer.png" alt="timer" class="infoIcon">
+                            <div class="infoText">
+                                <span> Timer</span>
+                                <p id="timerLabel"> 00:00:00 </p>
+                            </div>
+                            <img id="pauseIcon" src="navyPause.png" alt="pause" class="infoIcon">
+                        </div>
+                        <div class="infoItem">
+                            <img id="levelIcon" src="navyLevel.png" alt="difficulty" class="infoIcon">
+                            <div class="infoText">
+                                <span> Difficulty </span>
+                                <p id="difficultyLabel"> </p>
+                            </div>
+                        </div>
+                        <div id="pauseOverlay"> </div>
+                        <div id="pausePanel">
+                            <h2> Game Paused </h2>
+                            <p> Difficulty: <span id="pauseDifficulty"> </span></p>
+                            <p>Time: <span id="pauseTimer"></span></p>
+                            <button id="resumeBtn"> Resume </button>
+
+                        </div>
+
+                    </div>
+                    <div id="numberButtons">
+                        <table>
+                            <tr>
+                                <td><button class="numberBtn" data-number="1">1</button></td>
+                                <td><button class="numberBtn" data-number="2">2</button></td>
+                                <td><button class="numberBtn" data-number="3">3</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="numberBtn" data-number="4">4</button></td>
+                                <td><button class="numberBtn" data-number="5">5</button></td>
+                                <td><button class="numberBtn" data-number="6">6</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="numberBtn" data-number="7">7</button></td>
+                                <td><button class="numberBtn" data-number="8">8</button></td>
+                                <td><button class="numberBtn" data-number="9">9</button></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <button id="undoBtn">
+                        <img src="whiteUndo.png" alt="undo" class="infoIcon">
+                        Undo </button>
+                </div>
+            </div>
+        </div>
+        <div id ="endOverlay">
+            <div id ="endPanel">
+                <h2 id ="endTitle"></h2>
+                <p id="endMessage"> </p>
+                <button id="playAgainBtn"> Play Again</button>
+                <button id="homeBtn"> Home</button>
+            </div>
+        </div>
+       
+
+        <script type="module" src="game.js"></script>
+    </body>
+    </html>

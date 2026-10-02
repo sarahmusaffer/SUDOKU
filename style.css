@@ -2,51 +2,52 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
 }
-.light-mode{
+
+.light-mode {
     background-color: #f4f4f4;
 
-    .home-screen{
+    .home-screen {
         background: #eef2f7;
     }
 
-    h1{
+    h1 {
         color: #4a7de3;
     }
 
-    
+
 }
 
-.dark-mode{
+.dark-mode {
     background-color: #141628;
 
-    .home-screen{
+    .home-screen {
         background: #282d46;
     }
 
-    h1{
+    h1 {
         color: #82a4d8;
     }
 }
 
-.home-screen{
+.home-screen {
     position: relative;
-    width: min(350px,80vw);
+    width: min(350px, 80vw);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 18px;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .15);
     text-align: center;
 }
 
-#themeIcon{
+#themeIcon {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -55,58 +56,62 @@ body {
     cursor: pointer;
     transition: .2s;
 }
-#themeIcon:hover{
+
+#themeIcon:hover {
     transform: scale(1.15);
 }
 
-.logo{
+.logo {
     width: 100px;
 }
 
-h1{
+h1 {
     font-size: clamp(40px, 12vw, 55px);
     margin: 10px 0;
 }
 
-select{
+select {
     color: #4a7de3;
     background: #ffffff;
-    border:1px solid #ccc;
-    outline:none;
-}
-button{
-    width: 80%;
-    background:#4a7de3;
-    color:#ffffff;
-    border:none;
-    cursor:pointer;
-    transition:.2s;
+    border: 1px solid #ccc;
+    outline: none;
 }
 
-button:hover{
-    background:#3668d6;
+button {
+    width: 80%;
+    background: #4a7de3;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    background: #3668d6;
 }
 
 select {
     width: 100%;
 }
-select, button{
+
+select,
+button {
     padding: 12px;
     font-size: 16px;
     border-radius: 10px;
 }
 
-.secondary{
+.secondary {
     background: white;
     color: #4a7de3;
     border: 1px solid #ddd;
 }
 
-.secondary:hover{
-    background:#f2f2f2;
+.secondary:hover {
+    background: #f2f2f2;
 }
 
-#difficulty{
+#difficulty {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -114,21 +119,21 @@ select, button{
     gap: 8px;
 }
 
-#messageBox{
+#messageBox {
     background-color: #3668d6;
-        color: #ffffff;
+    color: #ffffff;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 15px 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .25);
     display: none;
     z-index: 1000;
 }
 
-#message{
+#message {
     margin: 0;
     font-size: 15px;
 }

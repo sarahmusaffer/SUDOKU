@@ -9,13 +9,13 @@ const timer = localStorage.getItem("timer");
 if (theme === "dark") {
     document.body.classList.add("dark-mode");
     document.body.classList.remove("light-mode");
-    themeIcon.src = "sun.png";
+    themeIcon.src = "images/sun.png";
 }
 
 themeIcon.addEventListener("click", function () {
     const body = document.body;
-    const moon = "moon.png";
-    const sun = "sun.png";
+    const moon = "images/moon.png";
+    const sun = "images/sun.png";
 
     if (body.classList.contains("light-mode")) {
         document.body.classList.add("dark-mode");

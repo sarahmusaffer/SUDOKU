@@ -53,14 +53,15 @@ Sudoku/
 ```
 
 ## 🎮 How to Play
-Choose a difficulty level.
-Select a number from the number buttons.
-Click on an empty Sudoku cell to place the selected number.
-An incorrect move removes one life.
-Use Undo to undo your previous move.
-Use Pause to pause the game.
-Complete the Sudoku puzzle to win.
-##⚙️ Game Features
+- Choose a difficulty level.
+- Select a number from the number buttons.
+- Click on an empty Sudoku cell to place the selected number.
+- An incorrect move removes one life.
+- Use Undo to undo your previous move.
+- Use Pause to pause the game.
+- Complete the Sudoku puzzle to win.
+  
+## ⚙️ Game Features
 ## ⏱️ Timer
 
 The game includes a timer that keeps track of the time.

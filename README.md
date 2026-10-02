@@ -105,11 +105,10 @@ The JavaScript code is organized into separate classes:
 
 ### API
 
-Sudoku puzzles are generated using the MTSudoku API.
+Sudoku puzzles are generated using the MTSudoku API that provides both the puzzle and its solution (no key required).
 
 API endpoint:
 https://api.mtsudoku.com/v1/generate
-The API provides both the Sudoku puzzle and its solution.
 
 ### How to Run
 - Download or clone the repository.

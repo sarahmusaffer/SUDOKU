@@ -60,7 +60,7 @@ Use Undo to undo your previous move.
 Use Pause to pause the game.
 Complete the Sudoku puzzle to win.
 ⚙️ Game Features
-⏱️ Timer
+### ⏱️ Timer
 
 The game includes a timer that keeps track of the player's time.
 

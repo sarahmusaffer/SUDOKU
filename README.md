@@ -1,30 +1,36 @@
-# SUDOKU GAME
-A web-based Sudoku game built using HTML, CSS & JavaScript.
-The project uses Object-Oriented Programming as well to organize the game logic, timer system and storage.
+# 🎮 Sudoku Game
 
-# Features
-- Sudoku puzzle generation using an API
-- Multiple difficulty levels
-- Three lives/hearts
-- Timer
-- Pause and resume
-- Undo moves
-- Dark and light mode
-- Save and restore game progress
-- Wrong move indication
-- Number completion tracking
-- Win and game-over screens
-- Play Again and Home buttons
+A web-based Sudoku game built using **HTML, CSS, and JavaScript**.
 
-# Technologies Used
-- HTML
-- CSS
+The project uses **Object-Oriented Programming (OOP)** to organize the game logic, timer system, user interface, and game storage.
+
+## ✨ Features
+
+- 🎲 Sudoku puzzle generation using an API
+- 🎯 Multiple difficulty levels
+- ❤️ Three lives/hearts
+- ⏱️ Game timer
+- ⏸️ Pause and resume
+- ↩️ Undo moves
+- 🌙 Dark and light mode
+- 💾 Save and restore game progress
+- ❌ Wrong move indication
+- 🔢 Number completion tracking
+- 🏆 Win and game-over screens
+- 🔄 Play Again option
+- 🏠 Home button
+
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
 - JavaScript
 - JavaScript Classes (OOP)
 - Local Storage
-- Sudoku API
+- MTSudoku API
 
-# Project Structure
+## 📁 Project Structure
+
 ```text
 Sudoku/
 │
@@ -33,7 +39,7 @@ Sudoku/
 │
 ├── css/
 │   ├── style.css
-│   ├── game.css
+│   └── game.css
 │
 ├── js/
 │   ├── script.js
@@ -44,55 +50,4 @@ Sudoku/
 │   └── SudokuUI.js
 │
 └── images/
-
-# How to Play
-- Choose a difficulty level.
-- Select a number from the number buttons.
-- Click on an empty Sudoku cell to place the selected number.
-- Incorrect moves reduce your lives.
-- Use Undo to undo your previous move.
-- Use Pause to pause the game.
-- Complete the Sudoku puzzle to win.
-
-# Game Features
-- Timer
-The game includes a timer that keeps track of the time. The timer can be paused and resumed.
-
-- Lives
-The player starts with three lives. An incorrect number removes one life.
-
-- Undo
-The Undo button removes the most recent move and restores the previous state of the cell.
-
-- Save Progress
-The game uses localStorage to save information such as:
-
-  - Current board
-  - Remaining lives
-  - Move history
-  - Number frequencies
-  - Timer
-  - Selected difficulty
-
-This allows the game to restore the player's progress after refreshing the page.
-
-- Dark Mode
-The player can switch between light mode and dark mode.
-
-- Object-Oriented Programming
-The JavaScript code is divided into separate classes:
-
-  - SudokuGame - handles the Sudoku board, puzzle, solution, moves, lives, and game state.
-  - GameTimer - handles the game timer.
-  - GameStorage - handles saving and retrieving game data from localStorage.
-  - SudokuUI - handles messages and end-game panels.
-  - game.js - connects the classes together and handles the main game interactions.
-
-- API
-Sudoku puzzles are generated using the MTSudoku API.
-https://api.mtsudoku.com/v1/generate
-The API provides both the Sudoku puzzle and its solution.
-
-# How to Run
-Open the project in a browser using a local server.
 

@@ -729,11 +729,7 @@ body {
         max-height: 58vw;
         max-width: 58vw;
     }
-
-    #numberButtons {
-        border-spacing: 5px;
-    }
-
+    
     #undoBtn {
         width: 150px;
     }

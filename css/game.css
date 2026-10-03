@@ -310,7 +310,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 50px;
+    gap: 150px;
 }
 
 #gridOverlay {

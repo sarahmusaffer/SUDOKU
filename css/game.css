@@ -310,7 +310,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 150px;
+    gap: 150px !important;
 }
 
 #gridOverlay {
@@ -358,6 +358,8 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 45px;
+    margin-left: 170px;
+
 }
 
 #sidePanel .infoIcon:nth-child(1).infoIcon {
@@ -675,6 +677,7 @@ body {
 }
 
 @media (max-width: 400px) {
+
     #game-container {
         width: 98%;
         margin: 8px auto;
@@ -707,7 +710,8 @@ body {
         font-size: 13px;
     }
 
-    #themeIcon, #homeIcon {
+    #themeIcon,
+    #homeIcon {
         width: 20px;
         height: 20px;
     }
@@ -718,7 +722,7 @@ body {
     }
 
     .sudokuCell {
-        font-size: clamp(12px, 5vw, 18px); 
+        font-size: clamp(12px, 5vw, 18px);
     }
 
     .numberBtn {
@@ -726,15 +730,20 @@ body {
         height: 14vw;
         min-width: 42px;
         min-height: 42px;
-        max-height: 58vw;
-        max-width: 58vw;
+        max-width: 58px;
+        max-height: 58px;
     }
-    
+
+    #numberButtons {
+        border-spacing: 5px;
+    }
+
     #undoBtn {
         width: 150px;
     }
 
-    #pausePanel, #endPanel {
+    #pausePanel,
+    #endPanel {
         width: 75vw;
         padding: 20px;
     }

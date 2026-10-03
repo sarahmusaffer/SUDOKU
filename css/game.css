@@ -53,6 +53,7 @@ body {
     .sudokuCell:disabled {
         background-color: #dce3f0;
     }
+
     #endPanel {
         background-color: #ffffff;
 
@@ -107,8 +108,9 @@ body {
         background-color: #dce3f0;
         color: #1f2945;
     }
-    .numberBtn:disabled{
-        background-color:#b9c0d4;
+
+    .numberBtn:disabled {
+        background-color: #b9c0d4;
     }
 
     .numberBtn.selected {
@@ -203,7 +205,7 @@ body {
         color: white;
     }
 
-    .numberBtn:disabled{
+    .numberBtn:disabled {
         background-color: #3a405d;
     }
 
@@ -239,7 +241,7 @@ body {
 }
 
 #resetBtn {
-    height:35px;
+    height: 35px;
     width: 125px;
     background-color: #4a7de3;
     color: white;
@@ -277,7 +279,7 @@ body {
 
 .infoText {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .infoText span {
@@ -308,7 +310,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 350px;
+    gap: 50px;
 }
 
 #gridOverlay {
@@ -358,16 +360,16 @@ body {
     gap: 45px;
 }
 
-#sidePanel .infoIcon:nth-child(1).infoIcon{
-    transform:translateY(5px);
+#sidePanel .infoIcon:nth-child(1).infoIcon {
+    transform: translateY(5px);
 }
 
 #sidePanel .infoItem:nth-child(2) .infoIcon {
     transform: translateY(5px);
 }
 
-#sidePanel .infoIcon:nth-child(3).infoIcon{
-    transform:translateY(5px);
+#sidePanel .infoIcon:nth-child(3).infoIcon {
+    transform: translateY(5px);
 }
 
 .infoItem span {
@@ -395,9 +397,9 @@ body {
     transition: .2s;
 }
 
-.numberBtn:disabled{
-    cursor :default;
-    transition:none;
+.numberBtn:disabled {
+    cursor: default;
+    transition: none;
     transform: none;
 
 }
@@ -407,7 +409,7 @@ body {
 }
 
 #undoBtn {
-    height:40px;
+    height: 40px;
     width: 180px;
     padding: 7px;
     padding-top: 5px;
@@ -517,7 +519,7 @@ body {
 }
 
 #messageBox {
-    background-color:#4a7de0;
+    background-color: #4a7de0;
     color: #ffffff;
     position: fixed;
     top: 50%;
@@ -527,7 +529,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, .25);
     display: none;
-    z-index: 1000; /*200*/
+    z-index: 1000;
+    /*200*/
     font-size: 18px;
 }
 
@@ -574,29 +577,21 @@ body {
     cursor: pointer;
 }
 
-@media (max-width: 900px){
-    #game-container{
-        width: 95%;
-        margin: 20px auto;
-    }
+@media (max-width: 900px) {
 
-    .top-bar h1{
-        font-size: 36px;
-    }
-
-    #gameContent{
+    #gameContent {
         flex-direction: column;
         align-items: center;
         gap: 25px;
     }
 
-    #sudokuBoard{
+    #sudokuBoard {
         width: min(90vw, 450px);
         height: min(90vw, 450px);
     }
 
-    #sidePanel{
-        gap:25px;
+    #sidePanel {
+        gap: 25px;
         width: 100%;
     }
 }
@@ -676,5 +671,75 @@ body {
     #endPanel {
         width: min(80vw, 350px);
         padding: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    #game-container {
+        width: 98%;
+        margin: 8px auto;
+    }
+
+    .top-bar {
+        gap: 6px;
+    }
+
+    .top-bar h1 {
+        font-size: 24px;
+    }
+
+    #lives {
+        gap: 2px;
+    }
+
+    .heart {
+        width: 20px;
+        height: 20px;
+    }
+
+    #topButtons {
+        gap: 5px;
+    }
+
+    #resetBtn {
+        height: 32px;
+        padding: 6px 8px;
+        font-size: 13px;
+    }
+
+    #themeIcon, #homeIcon {
+        width: 20px;
+        height: 20px;
+    }
+
+    #sudokuBoard {
+        width: 96vw;
+        height: 96vw;
+    }
+
+    .sudokuCell {
+        font-size: clamp(12px, 5vw, 18px); 
+    }
+
+    .numberBtn {
+        width: 14vw;
+        height: 14vw;
+        min-width: 42px;
+        min-height: 42px;
+        max-height: 58vw;
+        max-width: 58vw;
+    }
+
+    #numberButtons {
+        border-spacing: 5px;
+    }
+
+    #undoBtn {
+        width: 150px;
+    }
+
+    #pausePanel, #endPanel {
+        width: 75vw;
+        padding: 20px;
     }
 }

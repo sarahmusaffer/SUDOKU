@@ -28,196 +28,202 @@ body {
 
 .light-mode {
     background-color: #f5f7fa;
-
-    h1 {
-        color: #4a7de3;
-    }
-
-    #gridOverlay {
-        background-color: #f5f7fa;
-    }
-
-    #sudokuBoard {
-        border: 3px solid #1b2038;
-
-        .sudokuCell:nth-child(3n):not(:nth-child(9n)) {
-            border-right: 3px solid #1b2038
-        }
-
-        .sudokuCell:nth-child(n+19):nth-child(-n+27),
-        .sudokuCell:nth-child(n+46):nth-child(-n+54) {
-            border-bottom: 3px solid #1b2038;
-        }
-    }
-
-    .sudokuCell:disabled {
-        background-color: #dce3f0;
-    }
-
-    #endPanel {
-        background-color: #ffffff;
-
-        h2 {
-            color: #141628;
-        }
-
-        p {
-            color: #141628;
-        }
-
-        button {
-            background-color: #4a7de3;
-            color: #ffffff;
-        }
-    }
-
-    #pausePanel {
-        background-color: #ffffff;
-
-        h2 {
-            color: #141628;
-        }
-
-        p {
-            color: #141628;
-        }
-
-        span {
-            color: #4a7de3;
-        }
-    }
-
-    span {
-        color: #82a4d8;
-    }
-
-    #timerLabel {
-        color: #1f2945;
-    }
-
-    #difficultyLabel {
-        color: #1f2945;
-    }
-
-    .sudokuCell {
-        background-color: #f5f7fa;
-        color: #1f2945;
-    }
-
-    .numberBtn {
-        background-color: #dce3f0;
-        color: #1f2945;
-    }
-
-    .numberBtn:disabled {
-        background-color: #b9c0d4;
-    }
-
-    .numberBtn.selected {
-        background-color: #a0beff;
-    }
-
-    .numberBtn:hover:not(:disabled) {
-        background-color: #c0c9e0;
-    }
 }
+
+.light-mode h1 {
+    color: #4a7de3;
+}
+
+.light-mode #gridOverlay {
+    background-color: #f5f7fa;
+}
+
+.light-mode #sudokuBoard {
+    border: 3px solid #1b2038;
+}
+   .light-mode #sudokuBoard .sudokuCell:nth-child(3n):not(:nth-child(9n)) {
+        border-right: 3px solid #1b2038
+    }
+
+   .light-mode #sudokuBoard .sudokuCell:nth-child(n+19):nth-child(-n+27),
+    .light-mode #sudokuBoard .sudokuCell:nth-child(n+46):nth-child(-n+54) {
+        border-bottom: 3px solid #1b2038;
+    }
+
+
+.light-mode .sudokuCell:disabled {
+    background-color: #dce3f0;
+}
+
+.light-mode #endPanel {
+    background-color: #ffffff;
+}
+
+.light-mode #endPanel h2 {
+    color: #141628;
+}
+
+.light-mode #endPanel p {
+    color: #141628;
+}
+
+.light-mode #endPanel button {
+    background-color: #4a7de3;
+    color: #ffffff;
+}
+
+
+.light-mode #pausePanel {
+    background-color: #ffffff;
+}
+
+.light-mode #pausePanel h2 {
+    color: #141628;
+}
+
+.light-mode #pausePanel p {
+    color: #141628;
+}
+
+.light-mode #pausePanel span {
+    color: #4a7de3;
+}
+
+
+.light-mode span {
+    color: #82a4d8;
+}
+
+.light-mode #timerLabel {
+    color: #1f2945;
+}
+
+.light-mode #difficultyLabel {
+    color: #1f2945;
+}
+
+.light-mode .sudokuCell {
+    background-color: #f5f7fa;
+    color: #1f2945;
+}
+
+.light-mode .numberBtn {
+    background-color: #dce3f0;
+    color: #1f2945;
+}
+
+.light-mode .numberBtn:disabled {
+    background-color: #b9c0d4;
+}
+
+.light-mode .numberBtn.selected {
+    background-color: #a0beff;
+}
+
+.light-mode .numberBtn:hover:not(:disabled) {
+    background-color: #c0c9e0;
+}
+
 
 .dark-mode {
     background-color: #141628;
-
-    h1 {
-        color: #82a4d8;
-    }
-
-    span {
-        color: #82a4d8;
-    }
-
-    .sudokuCell:disabled {
-        background-color: #282d46;
-    }
-
-    #sudokuBoard {
-        border: 3px solid #ffffff;
-
-        .sudokuCell:nth-child(3n):not(:nth-child(9n)) {
-            border-right: 3px solid #ffffff;
-        }
-
-        .sudokuCell:nth-child(n+19):nth-child(-n+27),
-        .sudokuCell:nth-child(n+46):nth-child(-n+54) {
-            border-bottom: 3px solid #ffffff;
-        }
-    }
-
-    #gridOverlay {
-        background-color: #141628;
-    }
-
-    #endPanel {
-        background-color: #1b2038;
-
-        h2 {
-            color: #82a4d8;
-        }
-
-        p {
-            color: #d7def5;
-        }
-
-        button {
-            background-color: #4a7de3;
-            color: #ffffff;
-        }
-    }
-
-    #pausePanel {
-        background-color: #1b2038;
-
-        h2 {
-            color: #ffffff;
-        }
-
-        p {
-            color: #d7def5;
-        }
-
-        span {
-            color: #82a4d8;
-        }
-    }
-
-    #timerLabel {
-        color: #ffffff;
-    }
-
-    #difficultyLabel {
-        color: #ffffff;
-    }
-
-    .sudokuCell {
-        background-color: #141628;
-        color: white;
-    }
-
-    .numberBtn {
-        background-color: #282d46;
-        color: white;
-    }
-
-    .numberBtn:disabled {
-        background-color: #3a405d;
-    }
-
-    .numberBtn.selected {
-        background-color: #5a8cff;
-    }
-
-    .numberBtn:hover:not(:disabled) {
-        background-color: #3a405d;
-    }
-
 }
+
+.dark-mode h1 {
+    color: #82a4d8;
+}
+
+.dark-mode span {
+    color: #82a4d8;
+}
+
+.dark-mode .sudokuCell:disabled {
+    background-color: #282d46;
+}
+
+.dark-mode #sudokuBoard {
+    border: 3px solid #ffffff;
+}
+    .dark-mode #sudokuBoard .sudokuCell:nth-child(3n):not(:nth-child(9n)) {
+        border-right: 3px solid #ffffff;
+    }
+
+    .dark-mode #sudokuBoard .sudokuCell:nth-child(n+19):nth-child(-n+27),
+    .dark-mode #sudokuBoard .sudokuCell:nth-child(n+46):nth-child(-n+54) {
+        border-bottom: 3px solid #ffffff;
+    }
+
+
+.dark-mode #gridOverlay {
+    background-color: #141628;
+}
+
+.dark-mode #endPanel {
+    background-color: #1b2038;
+}
+
+.dark-mode #endPanel h2 {
+    color: #82a4d8;
+}
+
+.dark-mode #endPanel p {
+    color: #d7def5;
+}
+
+.dark-mode #endPanel button {
+    background-color: #4a7de3;
+    color: #ffffff;
+}
+
+
+.dark-mode #pausePanel {
+    background-color: #1b2038;
+}
+
+.dark-mode #pausePanel h2 {
+    color: #ffffff;
+}
+
+.dark-mode #pausePanel p {
+    color: #d7def5;
+}
+
+.dark-mode #pausePanel span {
+    color: #82a4d8;
+}
+
+
+.dark-mode #timerLabel {
+    color: #ffffff;
+}
+
+.dark-mode #difficultyLabel {
+    color: #ffffff;
+}
+
+.dark-mode .sudokuCell {
+    background-color: #141628;
+    color: white;
+}
+
+.dark-mode .numberBtn {
+    background-color: #282d46;
+    color: white;
+}
+
+.dark-mode .numberBtn:disabled {
+    background-color: #3a405d;
+}
+
+.dark-mode .numberBtn.selected {
+    background-color: #5a8cff;
+}
+
+.dark-mode .numberBtn:hover:not(:disabled) {
+    background-color: #3a405d;
+}
+
+
 
 #lives {
     align-items: center;
@@ -741,7 +747,7 @@ body {
     }
 
     #sudokuBoard {
-        width:86vw;
+        width: 86vw;
         height: 86vw;
         max-width: 335px;
         max-height: 335px;

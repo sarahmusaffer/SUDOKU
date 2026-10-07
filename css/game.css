@@ -649,12 +649,12 @@ body {
     }
 
     #sudokuBoard {
-        width: min(88vw, 350px);
-        height: min(88vw, 350px);
-        max-width: 350px;
-        max-height: 350px;
+        width: 82vw;
+        height: 82vw;
+        max-width: 340px;
+        max-height: 340px;
         flex-shrink: 0;
-        margin: 17px auto 0;
+        margin: 0 auto;
     }
 
     .sudokuCell {

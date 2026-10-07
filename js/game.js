@@ -286,6 +286,8 @@ themeIcon.addEventListener("click", function () {
         body.classList.remove("light-mode");
         body.classList.add("dark-mode");
         themeIcon.src = sun;
+        themeIcon.style.setProperty("width","25px","important");
+        themeIcon.style.setProperty("height","25px","important");
         homeIcon.src = "images/whiteHome.png";
         timerIcon.src = "images/whiteTimer.png";
         levelIcon.src = "images/whiteLevel.png";
@@ -301,6 +303,8 @@ themeIcon.addEventListener("click", function () {
         body.classList.remove("dark-mode");
         body.classList.add("light-mode");
         themeIcon.src = moon;
+        themeIcon.style.setProperty("width","23px","important");
+        themeIcon.style.setProperty("height","23px","important");
         homeIcon.src = "images/navyHome.png";
         timerIcon.src = "images/navyTimer.png";
         levelIcon.src = "images/navyLevel.png";

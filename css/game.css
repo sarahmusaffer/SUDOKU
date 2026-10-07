@@ -581,170 +581,201 @@ body {
 
 @media (max-width: 900px) {
 
-    #gameContent {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-    }
-
-    #sudokuBoard {
-        width: min(90vw, 450px);
-        height: min(90vw, 450px);
-    }
-
-    #sidePanel {
-        gap: 25px;
+    body {
         width: 100%;
+        height: 100%;
+        overflow: hidden;
     }
-}
-
-
-@media (max-width: 600px) {
 
     #game-container {
-        width: 96%;
-        margin: 10px auto;
+        width: 100%;
+        height: 100vh;
+        max-width: none;
+        margin: 0;
+        padding: 6px 0;
+        box-sizing: border-box;
     }
 
     .top-bar {
-        flex-wrap: wrap;
-        gap: 10px;
+        width: 96%;
+        height: 38px;
+        margin: 0 auto;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 5px;
     }
 
     .top-bar h1 {
-        font-size: 30px;
+        font-size: 25px;
+        margin: 0;
     }
 
     #lives {
-        gap: 4px;
+        gap: 3px;
     }
 
     .heart {
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
     }
 
     #topButtons {
-        gap: 8px;
+        gap: 6px;
     }
 
     #resetBtn {
-        width: auto;
-        height: 34px;
-        padding: 7px 10px;
-        font-size: 14px;
+        height: 30px;
+        padding: 4px 8px;
+        font-size: 12px;
     }
 
     #themeIcon,
     #homeIcon {
-        width: 22px;
-        height: 22px;
-    }
-
-    #sudokuBoard {
-        width: 94vw;
-        height: 94vw;
-        max-width: 450px;
-        max-height: 450px;
-    }
-
-    .sudokuCell {
-        font-size: clamp(14px, 5vw, 20px);
+        width: 19px;
+        height: 19px;
     }
 
     #gameContent {
-        gap: 20px;
+        width: 100%;
+        height: auto;
+        margin: 5px 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px !important;
+    }
+
+    #sudokuBoard {
+        width: min(88vw, 350px);
+        height: min(88vw, 350px);
+
+        max-width: 350px;
+        max-height: 350px;
+
+        flex-shrink: 0;
+
+        margin: 0 auto;
+    }
+
+    .sudokuCell {
+        font-size: 18px;
     }
 
     #sidePanel {
-        gap: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        margin: 0 !important;
+        flex-shrink: 0;
+    }
+
+    #gameInfo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+        width: 100%;
+    }
+
+    #numberButtons {
+        border-spacing: 4px;
+        margin: 0 auto;
     }
 
     .numberBtn {
-        width: clamp(48px, 15vw, 66px);
-        height: clamp(48px, 15vw, 66px);
+        width: 52px;
+        height: 52px;
+        font-size: 17px;
+        border-radius: 8px;
     }
 
     #undoBtn {
-        width: 160px;
-    }
-
-    #pausePanel,
-    #endPanel {
-        width: min(80vw, 350px);
-        padding: 25px;
+        width: 150px;
+        height: 34px;
+        padding: 4px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
     }
 }
 
 @media (max-width: 400px) {
 
     #game-container {
-        width: 98%;
-        margin: 8px auto;
+        padding: 4px 0;
     }
 
     .top-bar {
-        gap: 6px;
+        height: 35px;
     }
 
     .top-bar h1 {
-        font-size: 24px;
-    }
-
-    #lives {
-        gap: 2px;
+        font-size: 23px;
     }
 
     .heart {
-        width: 20px;
-        height: 20px;
-    }
-
-    #topButtons {
-        gap: 5px;
+        width: 18px;
+        height: 18px;
     }
 
     #resetBtn {
-        height: 32px;
-        padding: 6px 8px;
-        font-size: 13px;
+        height: 28px;
+        font-size: 11px;
+        padding: 3px 6px;
     }
 
     #themeIcon,
     #homeIcon {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
+    }
+
+
+    #gameContent {
+        height: auto;
+        gap: 5px !important;
     }
 
     #sudokuBoard {
-        width: 96vw;
-        height: 96vw;
+        width:86vw;
+        height: 86vw;
+        max-width: 335px;
+        max-height: 335px;
     }
 
     .sudokuCell {
-        font-size: clamp(12px, 5vw, 18px);
+        font-size: 16px;
     }
 
-    .numberBtn {
-        width: 14vw;
-        height: 14vw;
-        min-width: 42px;
-        min-height: 42px;
-        max-width: 58px;
-        max-height: 58px;
+    #sidePanel {
+        gap: 4px;
+        margin-left: 0 !important;
+    }
+
+    #gameInfo {
+        gap: 25px;
     }
 
     #numberButtons {
-        border-spacing: 5px;
+        border-spacing: 3px;
+    }
+
+    .numberBtn {
+        width: 48px;
+        height: 48px;
+        font-size: 16px;
     }
 
     #undoBtn {
-        width: 150px;
-    }
-
-    #pausePanel,
-    #endPanel {
-        width: 75vw;
-        padding: 20px;
+        width: 140px;
+        height: 32px;
+        font-size: 13px;
     }
 }

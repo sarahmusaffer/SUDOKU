@@ -115,4 +115,5 @@ https://api.mtsudoku.com/v1/generate
 - Open the project in a local server.
 - Open index.html in your browser.
 - Choose a difficulty level and start playing.
-  or open it via the link in the project description.
+  
+  Or open it via the link in the project description.

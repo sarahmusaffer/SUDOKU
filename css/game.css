@@ -144,6 +144,7 @@ body {
 .dark-mode #sudokuBoard {
     border: 3px solid #ffffff;
 }
+
     .dark-mode #sudokuBoard .sudokuCell:nth-child(3n):not(:nth-child(9n)) {
         border-right: 3px solid #ffffff;
     }
@@ -729,6 +730,7 @@ body {
     }
 
     #resetBtn {
+        width: 100px;
         height: 28px;
         font-size: 11px;
         padding: 3px 6px;
@@ -747,6 +749,7 @@ body {
     }
 
     #sudokuBoard {
+        margin-top: 15px;
         width: 86vw;
         height: 86vw;
         max-width: 335px;
